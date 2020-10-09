@@ -36,7 +36,7 @@ function getUserInof() {
         // 不论成功还是是失败。都是触发complete方法
         complete: function(res) {
             console.log(res);
-            // 判断，如果省份验证失败，跳转到登陆页面
+            // 判断，如果身份验证失败，跳转到登陆页面
             if (res.responseJSON.status === 1 && res.responseJSON.message === '身份验证失败')
             // 删除本地存储中的token
                 localStorage.removeItem('token')
